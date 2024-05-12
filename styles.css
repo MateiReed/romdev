@@ -35,6 +35,17 @@ to{
       transform: translateX(0px);
     }
     }
+.subtext{
+  margin: auto;
+  text-align: center;
+  position: relative;
+  color: gray;
+
+}
+
+.project{
+  filter: blur(7px);
+}
 
 * {
   font-family: "Roboto", sans-serif;
