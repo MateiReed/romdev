@@ -33,5 +33,5 @@ Odată ce accesezi site-ul nostru pentru prima dată, vei fi întâmpinat de un 
 
 Realizatori
 ---------------------------
-> Mania Matei
+> Mania Matei,
 > Nitu Emanuel
