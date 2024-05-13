@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <section id="landing-page">
         <nav>
             <li class="nav__link">
-                <a class="nav__link--anchor link__hover-effect link__hover-effect--black">Home</a>
+                <a href="./index.html" class="nav__link--anchor link__hover-effect link__hover-effect--black">Home</a>
             </li>
             <li class="nav__link">
                 <a href="./index.php" class="nav__link--anchor link__hover-effect link__hover-effect--black">Log In</a>

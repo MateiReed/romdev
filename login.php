@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
             // Autentificare reușită
             $_SESSION['username'] = $username;
-            header("Location: index.php"); // Redirecționează către pagina de control
+            header("Location: pagina.php"); // Redirecționează către pagina de control
             exit;
         } else {
             echo "<div class='test'>Parolă incorectă.</div>";
