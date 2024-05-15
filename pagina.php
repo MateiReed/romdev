@@ -162,7 +162,7 @@ if (!isset($_SESSION['username'])) {
           <br />
 
           <img id="imaginemodal" src="https://cdn.discordapp.com/avatars/703315979773673613/aa90677532d25052d91873ef0d6f1192.webp">
-          <h1>reederr</h1>
+          <h1>Mania Matei</h1>
           <h5>Web Developer</h5>
           <br>
           <a
@@ -183,7 +183,7 @@ if (!isset($_SESSION['username'])) {
         </a> <br /> 
      
        <img id="imaginemodal" src="https://cdn.discordapp.com/avatars/404666692879253504/02d1acfa2191b9b2e7a38aa65f063247.webp">
-          <h1>marakatat.</h1>  
+          <h1>Nitu Emanuel</h1>  
           <h5>Web Developer / Game Developer</h5>
           <br>
           <a
