@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php"); // Redirecționează către pagina de autentificare dacă nu sunteți autentificat
+    header("Location: login.php");
     exit;
 }
 ?>
@@ -12,9 +12,9 @@ if (!isset($_SESSION['username'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RomDev Games</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="icon" href="./assets/favicon.ico" />
-    <script src="./index.js"></script>
+    <script src="./scripts/index.js"></script>
     <script
       src="https://kit.fontawesome.com/492fd5106e.js"
       crossorigin="anonymous"
@@ -162,7 +162,7 @@ if (!isset($_SESSION['username'])) {
           <br />
 
           <img id="imaginemodal" src="https://cdn.discordapp.com/avatars/703315979773673613/aa90677532d25052d91873ef0d6f1192.webp">
-          <h1>Mania Matei</h1>
+          <h1>Matei</h1>
           <h5>Web Developer</h5>
           <br>
           <a
@@ -183,7 +183,7 @@ if (!isset($_SESSION['username'])) {
         </a> <br /> 
      
        <img id="imaginemodal" src="https://cdn.discordapp.com/avatars/404666692879253504/02d1acfa2191b9b2e7a38aa65f063247.webp">
-          <h1>Nitu Emanuel</h1>  
+          <h1>Emanuel</h1>  
           <h5>Web Developer / Game Developer</h5>
           <br>
           <a

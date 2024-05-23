@@ -1,21 +1,12 @@
-
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylelogin.css">
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./styles/stylelogin.css">
     <script src="https://kit.fontawesome.com/492fd5106e.js" crossorigin="anonymous"></script>
     <title>Log In Page</title>
     <script>
-  function onClick(e) {
-    e.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6LdSgdkpAAAAAKEVD_Li2KsicXY1EyVO1yi7gzi0', {action: 'LOGIN'});
-    });
-  }
 </script>
     <style>
         body {
@@ -51,12 +42,15 @@
         button:hover {
             background-color: #a58e54;
         }
-        .test{
+        .eroare{
             margin: auto;
             text-align: center;
             position: relative;
             bottom: 400px;
              color: red;
+        }
+        .h2{
+            color: black;
         }
     </style>
 </head>
@@ -97,26 +91,24 @@
 <?php
 session_start();
 include 'connection.php';
+include 'db.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
-    // Verificăm în baza de date dacă există un utilizator cu acest nume
-    $sql = "SELECT * FROM conturi WHERE username = '$username' AND password = '$password'";
-    $result = $conn->query($sql);
+    $stmt = $conn->prepare("SELECT * FROM conturi WHERE username = ? AND password = ?");
+    $stmt->bind_param("ss", $username, $password); 
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-            // Autentificare reușită
-            $_SESSION['username'] = $username;
-            header("Location: pagina.php"); // Redirecționează către pagina de control
-            exit;
-        } else {
-            echo "<div class='test'>Parolă incorectă.</div>";
-        }
-    } else 
-     
-
-?>
+        // Autentificare reușită
+        $_SESSION['username'] = $username;
+        header("Location: pagina.php");
+        exit;
+    } else {
+        echo "<div class='eroare'>Parolă incorectă.</div>";
+    }
+}

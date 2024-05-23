@@ -41,8 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylelogin.css">
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./styles/stylelogin.css">
     <script src="https://kit.fontawesome.com/492fd5106e.js" crossorigin="anonymous"></script>
     <title>Sign Up Page</title>
     <style>
@@ -79,6 +78,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         button:hover {
             background-color: #a58e54;
         }
+        .h2{
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -88,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href="./index.html" class="nav__link--anchor link__hover-effect link__hover-effect--black">Home</a>
             </li>
             <li class="nav__link">
-                <a href="./index.php" class="nav__link--anchor link__hover-effect link__hover-effect--black">Log In</a>
+                <a href="./login.php" class="nav__link--anchor link__hover-effect link__hover-effect--black">Log In</a>
             </li>
         </nav>
 
@@ -98,7 +100,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <br />
 
         <form action="" method="post">
-        <!-- <form action="connect.php" method="post"> -->
             <label for="username"><b>Username:</b></label>
             <input type="text" name="username" id="username" placeholder="Enter Username" required>
 

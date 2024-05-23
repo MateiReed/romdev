@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@keyframes animatieromdev {
+  from{
+  transform: translateX(-500px);
+  }
+  
+  to{
+    transform: translateX(0px);
+  }
+  }
+  
+  @keyframes iconite {
+    from{
+    transform: translateY(-200px);
+  
+    }
+    
+    to{
+      transform: translateX(0px);
+    }
+    }
+    
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  
+
+p {
+  cursor: default;
+  z-index: 69;
+}
+
+.nav__link--anchor,
+.h2 {
+  transition: 700ms color ease-in-out !important;
+}
+
+section {
+  transition: 700ms background-color ease-in-out !important;
+}
+
+  .nav__link--anchor,
+.nav__link--anchor,
+  .h2 {
+  color: #000000;
+}
+
+.nav__link {
+  margin: 0 12px;
+  transition: all 300ms ease-in-out;
+  animation: iconite 2.0s;
+}
+.nav__link--list {
+  list-style: none;
+  display: flex;
+}
+.nav__link a {
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #242424;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+textarea {
+  width: 100%;
+  background-color: #ffffff;
+  color: #858585;
+  outline: none;
+  border: 1px solid #c0c4cc;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  transition: all 400ms ease;
+}
+
+input:hover,
+textarea:hover {
+  border-color: #fff;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #FCE09B;
+}
+
+.text--blue {
+  color: #FCE09B !important;
+  display: inline-block;
+}
+
+/* Pagina */
+
+#landing-page {
+  min-height: 100vh;
+}
+
+/* Navigatie */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+}
+
+ ::-webkit-scrollbar {
+  background-color: #101010;
+}
+
+/* Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  color: #a7a7a7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+ 
+.h2{
+  text-align: center;
+  margin-top: 50px;
+  transition: all 300ms ease-in-out;
+  animation: iconite 1s;
+  }
+
+  .shape {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+    animation: fadeIn 0.5s;
+    
+  }
+  
