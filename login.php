@@ -104,7 +104,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        // Autentificare reușită
         $_SESSION['username'] = $username;
         header("Location: pagina.php");
         exit;
