@@ -5,18 +5,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = htmlspecialchars($_POST['email']);
 
     try {
-        // Conectare la baza de date
-        $conn = new mysqli('localhost', 'admin', 'test', "romdev");
+       $conn = new mysqli('localhost', 'admin', 'test', "romdev");
 
         if ($conn->connect_error) {
             throw new Exception("Connection failed: " . $conn->connect_error);
         }
 
-        // Declaratie pregatita pentru inserarea datelor
+       
         $sql = "INSERT INTO conturi (username, password, email) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
 
-        // Legare parametri și executare
+     
         $stmt->bind_param("sss", $username, $password, $email);
         if ($stmt->execute()) {
         echo "Cont creat cu succes!";
@@ -27,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Exception("Error: " . $sql . "<br>" . $conn->error);
         }
 
-        // Inchiderea declaratiei si a conexiunii
+      
         $stmt->close();
         $conn->close();
     } catch (Exception $e) {
